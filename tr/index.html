@@ -52,7 +52,7 @@
                 }
             }
             .isActive{
-                background: linear-gradient(180deg, #bdf347 0%, #5ef347 100%);
+                background: linear-gradient(180deg, #5ef347 0%, #5ef347 100%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
@@ -259,7 +259,7 @@
                         </h4>
                         <br>
                         <p class="has-text-left">
-                            <a style="background: rgba(255, 255, 255, 0.4); color: #1854AE; font-family: 'Montserrat'; " class="button is-light is-rounded is-medium " href="#about">
+                            <a style="background: rgba(255, 255, 255, 0.4); color: whitesmoke; font-family: 'Montserrat'; " class="button is-light is-rounded is-medium " href="#about">
                                 <span>Daha Fazla Öğren</span>
                             </a>
                         </p>
@@ -363,7 +363,7 @@
                             <!-- Access your applications remotely without using a server. -->
                         </h4>
                         <p class="has-text-left-desktop has-text-centered-mobile">
-                            <a style="background: #8baf3d; color: white; " class="button is-light is-rounded  " href="#contact">
+                            <a style="background: #8baf3d85; color: black; font-family: 'Montserrat';  " class="button is-light is-rounded  " href="#contact">
                                 <span>
                                     <!-- Make your business accessible -->
                                     <!-- Turkish -->
@@ -397,7 +397,7 @@
                             <!-- Access your applications remotely without using a server. -->
                         </h4>
                         <p class="has-text-left-desktop has-text-centered-mobile">
-                            <a style="background: #8baf3d; color: white; " class="button is-light is-rounded  " href="#contact">
+                            <a style="background: #8baf3d85; color: black; font-family: 'Montserrat';  " class="button is-light is-rounded  " href="#contact">
                                 <span>
                                     <!-- Move to Web3 -->
                                     <!-- Turkish -->
@@ -438,7 +438,7 @@
                             <!-- Connect to all your applications and devices from anywhere safely. With DeraConnect, make your devices, applications and businesses accessible remotely. -->
                         </h4>
                         <p class="has-text-left-desktop has-text-centered-mobile">
-                            <a style="background: #8baf3d; color: white; " class="button is-light is-rounded  " href="#contact">
+                            <a style="background: #8baf3d85; color: black; font-family: 'Montserrat';  " class="button is-light is-rounded  " href="#contact">
                                 <span>
                                     <!-- Move your app to higher standarts -->
                                     <!-- Turkish -->
@@ -484,7 +484,7 @@
                             <!-- Access your applications over the internet without the need for an IT team or a firewall. And you don't even need to use your IP address or open ports with the power of Blockchain. -->
                         </h4>
                         <p class="has-text-right-desktop has-text-centered">
-                            <a style="background: #8baf3d; color: white; " class="button is-light is-rounded  " href="#contact">
+                            <a style="background: #8baf3d85; color: black; font-family: 'Montserrat';  " class="button is-light is-rounded  " href="#contact">
                                 <span>
                                     <!-- Contact Us to Lower Your Costs -->
                                     <!-- Turkish -->
@@ -515,7 +515,7 @@
                             <!-- Connect to all your applications and devices from anywhere safely. With DeraConnect, make your devices, applications and businesses accessible remotely. -->
                         </h4>
                         <p class="has-text-left-desktop has-text-centered-mobile">
-                            <a style="background: #8baf3d; color: white; " class="button is-light is-rounded  " href="#contact">
+                            <a style="background: #8baf3d85; color: black; font-family: 'Montserrat';  " class="button is-light is-rounded  " href="#contact">
                                 <span>
                                     <!-- Integrate Now -->
                                     <!-- Turkish -->
@@ -821,6 +821,7 @@
     <!-- Script to shrink header on scroll -->
     <script>
         window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("navbar");
         
         var logoimg = document.getElementById("logoimg");
         var portalicon = document.getElementById("portalicon");
@@ -892,11 +893,13 @@ $navbarBurgers.forEach( el => {
             contactText.classList.remove("has-text-white");
             refText.classList.remove("has-text-white");
             aboutText.classList.remove("has-text-white");
+            navbar.style.backgroundImage = "linear-gradient(180deg, #ffffffaa 90%, #ffffff00 100%)";
             
           } else {
             // logo.classList.add("is-one-third");
             // logo.classList.remove("is-half");
             logoimg.src = "../images/headerIcons/logo.svg";
+            navbar.style.backgroundImage = "none";
             if(!isMobile){  
                 portalicon.src = "../images/headerIcons/portalicon.svg";
                 contacticon.src = "../images/headerIcons/contact.svg";
