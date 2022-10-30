@@ -2,142 +2,141 @@
 
 <!DOCTYPE html>
 <html lang="en" style=" scroll-snap-points-y: repeat(100vh); scroll-snap-type: y mandatory;" >
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DeraConnect</title>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js">
-    </script>
-    <style>
-        @font-face { font-family: Specify; src: url('../fonts/SpecifyPERSONAL-ExpBold.ttf'); }
-        @font-face { font-family: BodyBold; src: url('../fonts/AIA-BodyBold.ttf'); }
-
-        .features {
-            background: rgba(0, 0, 0, 0.75);
-            /* Shadow */
-            min-height: 30vh;
-
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5px);
-            /* Note: backdrop-filter has minimal browser support */
-            text-align: left;  font-family: 'Montserrat'; color: rgba(255, 255, 255, 0.85); font-size: larger; line-height: 116.5%;
-            border-radius: 4px;
-        }
-        @keyframes float {
-            0% {
-                transform: translatey(0px);
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DeraConnect</title>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js">
+        </script>
+        <style>
+            @font-face { font-family: BodyBold; src: url('fonts/AIA-BodyBold.ttf'); }
+    
+            .features {
+                background: rgba(0, 0, 0, 0.75);
+                /* Shadow */
+                min-height: 30vh;
+    
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5px);
+                /* Note: backdrop-filter has minimal browser support */
+                text-align: left;  font-family: 'Montserrat'; color: rgba(255, 255, 255, 0.85); font-size: larger; line-height: 116.5%;
+                border-radius: 4px;
             }
-            50% {
-                transform: translatey(-20px);
+            @keyframes float {
+                0% {
+                    transform: translatey(0px);
+                }
+                50% {
+                    transform: translatey(-20px);
+                }
+                100% {
+                    transform: translatey(0px);
+                }
+            }
+            .isActive{
+                background: linear-gradient(180deg, #bdf347 0%, #5ef347 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+    
+            .desc{
+                font-family: 'Montserrat';
+                font-style: normal;
+                line-height: 95.1%;
+                /* or 30px */
+    
+    
+                /* FocusedText-B */
+    
+                color: rgba(0, 0, 0, 0.95);
+            }
+    
+            /* Slide */
+            .hover {
+                margin-left: 0px;
+                -webkit-transition: .3s ease-in-out;
+                transition: .3s ease-in-out;
+            }
+            .hover:hover {
+                margin-left: -40px;
+            }
+            .icon-scroll,
+            .icon-scroll:before {
+            position: fixed;
+            z-index: 999;
+            right: 2rem;
+            }
+            .icon-scroll {
+            width: 40px;
+            height: 70px;
+            margin-left: -20px;
+            bottom: 4vh;
+            margin-top: -35px;
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.63);
+            border-radius: 25px;
+            }
+            .icon-scroll:before {
+            position: fixed;
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: rgba(0, 0, 0, 0.505);
+            margin-left: -4px;
+            bottom: 10vh;
+            border-radius: 4px;
+            right: 3rem;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-name: scroll;
+            }
+            @-moz-keyframes scroll {
+            0% {
+                opacity: 1;
             }
             100% {
-                transform: translatey(0px);
+                opacity: 0;
+                transform: translateY(46px);
             }
-        }
-        .isActive{
-            background: linear-gradient(180deg, rgba(227, 83, 135, 0.9) 0%, rgba(180, 16, 104, 0.9) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
-        }
-
-        .desc{
-            font-family: 'Montserrat';
-            font-style: normal;
-            line-height: 95.1%;
-            /* or 30px */
-
-
-            /* FocusedText-B */
-
-            color: rgba(0, 0, 0, 0.95);
-        }
-
-        /* Slide */
-        .hover {
-            margin-left: 0px;
-            -webkit-transition: .3s ease-in-out;
-	        transition: .3s ease-in-out;
-        }
-        .hover:hover {
-            margin-left: -40px;
-        }
-        .icon-scroll,
-        .icon-scroll:before {
-        position: fixed;
-        z-index: 999;
-        right: 2rem;
-        }
-        .icon-scroll {
-        width: 40px;
-        height: 70px;
-        margin-left: -20px;
-        bottom: 4vh;
-        margin-top: -35px;
-        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.63);
-        border-radius: 25px;
-        }
-        .icon-scroll:before {
-        position: fixed;
-        content: '';
-        width: 8px;
-        height: 8px;
-        background: rgba(0, 0, 0, 0.505);
-        margin-left: -4px;
-        bottom: 10vh;
-        border-radius: 4px;
-        right: 3rem;
-        animation-duration: 1.5s;
-        animation-iteration-count: infinite;
-        animation-name: scroll;
-        }
-        @-moz-keyframes scroll {
-        0% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-            transform: translateY(46px);
-        }
-        }
-        @-webkit-keyframes scroll {
-        0% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-            transform: translateY(46px);
-        }
-        }
-        @-o-keyframes scroll {
-        0% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-            transform: translateY(46px);
-        }
-        }
-        @keyframes scroll {
-        0% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-            transform: translateY(46px);
-        }
-        }
-    </style>
-</head>
+            }
+            @-webkit-keyframes scroll {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(46px);
+            }
+            }
+            @-o-keyframes scroll {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(46px);
+            }
+            }
+            @keyframes scroll {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(46px);
+            }
+            }
+        </style>
+    </head>
 
 <body style=" width: 100vw; height: 100vh;"  >
     <div class="icon-scroll"></div>
     <nav id="navbar" class="navbar is-fixed-top is-transparent" style="background-color: transparent; background-image: none;" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item"href="https://DeraConnect.com">
+            <a class="navbar-item"href="https://DeraConnect.com" style=" margin-left: 5%;">
                 <img id="logoimg" style="transition: 0.2s; max-height: none; " src="../images/headerIcons/logo.svg" alt="DeraConnect Web3 based serverless secure remote network"  >
             </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
@@ -196,16 +195,16 @@
                             <br/>
                             <br/>
                             <br/>
-                            <h3 style="font-family: Specify;" class="subtitle has-text-white is-5" sty>
+                            <h3 style="font-family: 'Montserrat';" class="subtitle has-text-white is-5" sty>
                                 WEBüç BASED SERVERLESS SECURE
                             </h2>
                             <p></p>
-                            <h1 style="font-family: Specify;" class="title has-text-white is-1">
+                            <h1 style="font-family: 'Montserrat';" class="title has-text-white is-1">
                                 Remote <p></p> Private Network
                             </h1>
                             <p></p>
     
-                            <h2 style="font-family: Specify;" class="subtitle has-text-white is-5">
+                            <h2 style="font-family: 'Montserrat';" class="subtitle has-text-white is-5">
                                 Achieve high security standards with the power of blockchain
                                 <p></p>
                                 Remotely access your apps, devices and business
@@ -224,16 +223,16 @@
     <section id="home" class="hero is-fullheight is-default is-bold" style="scroll-snap-align: center; background-size: cover; background-position: center;background-repeat:repeat; background-image:url('../images/bgGradient.png');">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <div class="columns is-vcentered">
-                    <div class="column is-5 is-offset-1">
-                        <h3 style="font-family: Specify;" class="subtitle has-text-left has-text-white is-5" sty>
-                            <label style="color: #bdf347;" >WEBüç</label> TABANLI
+                <div class="columns is-vcentered is-multiline is-mobile">
+                    <div class="column is-5-desktop is-12-mobile">
+                        <h3 style="font-family: 'Montserrat';" class="subtitle has-text-left has-text-white is-5" sty>
+                            <label style="color: #bdf347;" >WEB3</label> TABANLI
                         </h2>
-                        <h1 style="font-family: Specify;" class="title has-text-left has-text-white is-1">
+                        <h1 style="font-family: 'Montserrat';" class="title has-text-left has-text-white is-1">
                             Uzak <br> Özel Ağ
                         </h1>
 
-                        <h4 style="font-family: Specify;" class="subtitle has-text-left has-text-white is-6">
+                        <h4 style="font-family: 'Montserrat';" class="subtitle has-text-left has-text-white is-6">
                             <!-- Achieve high security standards with the power of blockchain
                             <br>
                             Remotely access your apps, devices and business -->
@@ -244,13 +243,13 @@
                         </h4>
                         <br>
                         <p class="has-text-left">
-                            <a style="background: rgba(255, 255, 255, 0.4); color: #1854AE; font-family: Specify; " class="button is-light is-rounded is-medium " href="#about">
+                            <a style="background: rgba(255, 255, 255, 0.4); color: #1854AE; font-family: 'Montserrat'; " class="button is-light is-rounded is-medium " href="#about">
                                 <span>Daha Fazla Öğren</span>
                             </a>
                         </p>
                     </div>
-                
-                <div class="column is-6">
+                <div class="column is-invisible-desktop is-2-mobile"> </div>
+                <div class="column is-6-desktop is-8-mobile ">
                     <figure class="image is-4by3">
                         <img src="../images/bgShape.svg" style="animation: float 6s ease-in-out infinite;" alt="Description">
                     </figure>
@@ -264,7 +263,7 @@
             <div class="container has-text-centered">
                 <div class="tabs is-centered is-marginless ">
                     <ul style="max-width: 90vw;" >
-                        <li class="is-hidden-desktop" style="min-width: 30vw;" > </li>
+                        <li class="is-hidden-desktop" style="min-width: 40vw;" > </li>
                         <li class="tab is-active title isActive" onclick="openTab(event,'Everyone')"><a>Herkes</a></li>
                         <li class="tab" onclick="openTab(event,'Factories')"><a>Fabrikalar</a></li>
                         <li class="tab" onclick="openTab(event,'Startups')"><a>Startuplar</a></li>
@@ -274,7 +273,7 @@
                 <div class="columns is-marginless">
                     <div class="column is-4-desktop is-hidden-mobile"></div>
                     <div class="column is-4-desktop is-12-mobile">
-                        <h4 style="font-family: Specify;" class="title isActive has-text-left is-4">
+                        <h4 style="font-family: 'Montserrat';" class="title isActive has-text-left is-4">
                             için DeraConnect ne katkı sağlar? 
                             <!-- What does DeraConnect offer for -->
                         </h4>
@@ -283,10 +282,10 @@
                     <div class="column is-4-desktop is-hidden-mobile"></div>
                 </div>
                 <div class="columns">
-                    <div class="column is-4-desktop is-hidden-mobile"></div>
-                    <div class="column is-4-desktop is-12-mobile">
+                    <div class="column is-3-desktop is-hidden-mobile"></div>
+                    <div class="column is-6-desktop is-12-mobile">
                         <div id="Everyone" class="content-tab" >
-                            <h5 style="font-family: Specify;" class="title desc has-text-left is-5">
+                            <h5 style="font-family: 'Montserrat'; font-weight: 300; " class="title desc has-text-left is-5">
                                 Dera Connect ile cihazlarınızı, uygulamalarınızı ve işletmelerinizi uzaktan erişilebilir hale getirebilirsiniz. Sunucu kullanmanıza gerek kalmadan her tür uygulamanızı internet üzerinden erişebilir kılabilirsiniz. Bunun için herhangi bi IT masrafı veya güvenlik duvarına ihtiyaç yoktur. Blockchainin gücü ile ip adresi kullanmanıza veya port açmanıza gerek kalmaz.
                                 <br>
                                 <br>
@@ -298,7 +297,7 @@
                             </h5>
                         </div>
                         <div id="Factories" class="content-tab"  style="display:none">
-                            <h3 style="font-family: Specify;" class="title desc has-text-left is-5">
+                            <h3 style="font-family: 'Montserrat'; font-weight: 300; " class="title desc has-text-left is-5">
                                 <!-- For factories and industrial companies, secure remote access to PLCs, SCADA, MES, ERP, and other systems is a must. DeraConnect provides a secure and easy-to-use solution for this. You can access your systems from anywhere in the world without opening ports or using IP addresses. 
                                 <br>
                                 <br>
@@ -311,21 +310,21 @@
                             </h3>
                         </div>
                         <div id="Startups" class="content-tab"  style="display:none">
-                            <h3 style="font-family: Specify;" class="title desc has-text-left is-5">
+                            <h3 style="font-family: 'Montserrat'; font-weight: 300; " class="title desc has-text-left is-5">
                                 <!-- For Startups and small sized companies, maintaining cloud servers and security is a big challenge. DeraConnect provides a secure and easy-to-use solution for this. You don't need an IT team or costly cloud servers. With easy-to-use rules, you can create a secure remote app in minutes. You can access your apps from anywhere in the world without opening ports or using IP addresses. -->
                                 <!-- Turkish -->
                                 Startuplar ve küçük ölçekli şirketler için bulut sunucular çalıştırmak ve güvenliklerini sağlamak büyük bir zorluktur. DeraConnect, bu sorunlar için güvenli ve kolay kullanıma sahip bir çözüm sunar. IT ekibine veya pahalı bulut sunucularına ihtiyaç duymazsınız. Oluşturması kolay kurallarla dakikalar içinde güvenli uzaktan bir uygulama oluşturabilirsiniz. Port açmanıza veya IP adresi kullanmanıza gerek kalmadan dünyanın herhangi bir yerinden uygulamanıza erişebilirsiniz.
                             </h3>
                         </div>
                         <div id="SupplyChains" class="content-tab"  style="display:none">
-                            <h3 style="font-family: Specify;" class="title desc has-text-left is-5">
+                            <h3 style="font-family: 'Montserrat'; font-weight: 300; " class="title desc has-text-left is-5">
                                 <!-- Connecting all the devices in the supply chain to a private network is a big challenge. DeraConnect provides a secure and easy-to-use solution for this. You can create a private network for your supply chain and connect all the devices to it as they are on your local network. You can access your devices from anywhere in the world without opening ports or using IP addresses. -->
                                 <!-- Turkish -->
                                 Tedarik zincirindeki tüm cihazları özel bir ağa bağlamak büyük bir zorluktur. DeraConnect, bu sorunlar için güvenli ve kolay kullanıma sahip bir çözüm sunar. Tedarik zinciriniz için özel bir ağ oluşturabilir ve tüm cihazları yerel ağınızda olduğu gibi bu ağa bağlayabilirsiniz. Port açmanıza veya IP adresi kullanmanıza gerek kalmadan dünyanın herhangi bir yerinden cihazlarınıza erişebilirsiniz.
                             </h3>
                         </div>
                     </div>
-                    <div class="column is-4-desktop is-hidden-mobile"></div>
+                    <div class="column is-3-desktop is-hidden-mobile"></div>
                 </div>
             </div>
         </div>
@@ -347,8 +346,8 @@
                             <!-- english -->
                             <!-- Access your applications remotely without using a server. -->
                         </h4>
-                        <p class="has-text-left">
-                            <a style="background: rgba(137, 43, 226, 0.526); color: white; " class="button is-light is-rounded  " href="#contact">
+                        <p class="has-text-left-desktop has-text-centered-mobile">
+                            <a style="background: #8baf3d; color: white; " class="button is-light is-rounded  " href="#contact">
                                 <span>
                                     <!-- Make your business accessible -->
                                     <!-- Turkish -->
@@ -381,8 +380,8 @@
                             <!-- english -->
                             <!-- Access your applications remotely without using a server. -->
                         </h4>
-                        <p class="has-text-left">
-                            <a style="background: rgba(137, 43, 226, 0.526); color: white; " class="button is-light is-rounded  " href="#contact">
+                        <p class="has-text-left-desktop has-text-centered-mobile">
+                            <a style="background: #8baf3d; color: white; " class="button is-light is-rounded  " href="#contact">
                                 <span>
                                     <!-- Move to Web3 -->
                                     <!-- Turkish -->
@@ -422,8 +421,8 @@
                             <!-- english -->
                             <!-- Connect to all your applications and devices from anywhere safely. With DeraConnect, make your devices, applications and businesses accessible remotely. -->
                         </h4>
-                        <p class="has-text-left">
-                            <a style="background: rgba(137, 43, 226, 0.526); color: white; " class="button is-light is-rounded  " href="#contact">
+                        <p class="has-text-left-desktop has-text-centered-mobile">
+                            <a style="background: #8baf3d; color: white; " class="button is-light is-rounded  " href="#contact">
                                 <span>
                                     <!-- Move your app to higher standarts -->
                                     <!-- Turkish -->
@@ -452,24 +451,24 @@
             <div class="container has-text-centered">
                 <div class="columns is-multiline is-vcentered">
                     
-                    <div class="column is-6-desktop is-12-mobile">
+                    <div class="column is-5-desktop is-11-mobile">
                         <img class="hover" src="../images/pages/s5.png" alt="Description">
                     </div>
-                    <div class="column is-6-desktop is-12-mobile">
-                        <h2 style="font-family: 'Montserrat';" class="title has-text-left-desktop has-text-centered-mobile has-text-black is-3">
+                    <div class="column is-6-desktop is-11-mobile">
+                        <h2 style="font-family: 'Montserrat';" class="title has-text-right-desktop has-text-centered has-text-black is-3">
                             IT ve sunucu masraflarından kurtulun.
                             <!-- english -->
                             <!-- Lower your IT and server costs. -->
                         </h2>
                         <p></p>
 
-                        <h4 style="font-family: 'Montserrat';" class="subtitle has-text-left-desktop has-text-centered-mobile has-text-black is-6">
+                        <h4 style="font-family: 'Montserrat';" class="subtitle has-text-right-desktop has-text-centered has-text-black is-6">
                              Uygulamalarınızı internet üzerinden  IT masrafı veya güvenlik duvarına ihtiyaç duymadan erişebilir kılın.  Üstelik Blockchain in gücü ile ip adresi kullanmanıza veya port açmanıza da gerek yok.
                             <!-- english -->
                             <!-- Access your applications over the internet without the need for an IT team or a firewall. And you don't even need to use your IP address or open ports with the power of Blockchain. -->
                         </h4>
-                        <p class="has-text-left">
-                            <a style="background: rgba(137, 43, 226, 0.526); color: white; " class="button is-light is-rounded  " href="#contact">
+                        <p class="has-text-right-desktop has-text-centered">
+                            <a style="background: #8baf3d; color: white; " class="button is-light is-rounded  " href="#contact">
                                 <span>
                                     <!-- Contact Us to Lower Your Costs -->
                                     <!-- Turkish -->
@@ -499,8 +498,8 @@
                             <!-- english -->
                             <!-- Connect to all your applications and devices from anywhere safely. With DeraConnect, make your devices, applications and businesses accessible remotely. -->
                         </h4>
-                        <p class="has-text-left">
-                            <a style="background: rgba(137, 43, 226, 0.526); color: white; " class="button is-light is-rounded  " href="#contact">
+                        <p class="has-text-left-desktop has-text-centered-mobile">
+                            <a style="background: #8baf3d; color: white; " class="button is-light is-rounded  " href="#contact">
                                 <span>
                                     <!-- Integrate Now -->
                                     <!-- Turkish -->
@@ -662,8 +661,8 @@
                                             <div class="media-content">
                                                 <p class="title is-4">Email</p>
                                                 <p class="subtitle is-6">
-                                                    <a href="mailto:omer@derateknoloji.com">
-                                                        omer@derateknoloji.com
+                                                    <a href="mailto:connect@derateknoloji.com">
+                                                        connect@derateknoloji.com
                                                     </a>
                                                 </p>
                                             </div>
