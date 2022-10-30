@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+  <defs>
+    <pattern id="square" width="200" height="200" patternUnits="userSpaceOnUse">
+      <rect width="200" height="200" style="fill:none;stroke:#a9a9a9;stroke-width:20px"/>
+    </pattern>
+    <pattern id="quad" width="400" height="400" patternUnits="userSpaceOnUse">
+      <rect width="400" height="400" style="stroke:#366" fill="url(#square)"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="url(#quad)" style="stroke:#366;stroke-width:20px"/>
+</svg>
