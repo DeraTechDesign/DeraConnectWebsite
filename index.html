@@ -27,6 +27,38 @@
     <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js">
     </script>
     <style>
+        .bd-footer-link-title {
+            color: #BDF347;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .bd-footer-link-title h2{
+            margin-bottom: 4vh;
+        }
+        .bd-newsletter-box .icon {
+        align-self: flex-start;
+        }
+
+        .bd-footer-link {
+            padding-bottom: 2vh;
+        }
+
+        .bd-footer-link a {
+        color: white;
+        }
+        .bd-footer-link a:link {
+        color: white;
+        }
+
+        /* visited link */
+        .bd-footer-link a:visited {
+        color: white;
+        }
+
+        /* mouse over link */
+        .bd-footer-link a:hover {
+        color: #bdf347;
+        }
         @font-face { font-family: BodyBold; src: url('fonts/AIA-BodyBold.ttf'); }
 
         .features {
@@ -734,9 +766,142 @@ Gerçek sıfır-sızıntı sistemler kurabilirsiniz. Uygulamanıza erişimi akı
         </div>
     </section>
 
+    <section id="footer" style="scroll-snap-align: end; min-height: 60vh;  background-size: cover; background-position: center;background-repeat:repeat; background-image:url('images/bgGradient.png');">
+        <div class="hero-foot">
+            <div class="container is-full has-text-left is-marginless">
+                <div class="columns bd-footer-links pt-6" style="width: 100vw; padding-left: 6vw; padding-right: 6vw; ">
+                    <div class="column is-1-desktop is-invisible-mobile">
+                    </div>
+                    <div class="column is-4 has-text-left has-text-white">
+                        <img id="logoimg" style="transition: 0.2s; margin-bottom: 7vh; max-height: none; "
+                            src="images/headerIcons/logoBlue.svg"/>
+                        <p class="bd-footer-link has-text-left">
+                            <h2>
+                                We are here to help people make secure remote connections.
+                                <br>
+                                <br>
+                                Made with mind and love in Istanbul
+                            </h2>
+                        </p>
+                    </div>
+                    <div class="column is-2" style="color: #bdf347;">
+                        <div class="bd-footer-link-title">
+                            <h2>WEBSITE MAP</h2>
+                        </div>
+                        <p class="bd-footer-link">
+                            <a href="">
+                                Devportal
+                            </a>
+                        </p>
+                        <p class="bd-footer-link">
+                            <a href="/#features1">
+                                Features
+                            </a>
+                        </p>
+                        <p class="bd-footer-link">
+                            <a href="/#about">
+                                About
+                            </a>
+                        </p>
+                        <p class="bd-footer-link">
+                            <a href="/#contact">
+                                Contact
+                            </a>
+                        </p>
+                    </div>
+                    <div class="column is-2" style="color: #bdf347;">
+                        <div class="bd-footer-link-title">
+                        <h2>CONTACT</h2>
+                        </div>
+                        <p class="bd-footer-link">
+                            <a href="mailto:connect@derateknoloji.com">connect@derateknoloji.com</a>
+                        </p>
+                        <p class="bd-footer-link">
+                            <a href="www.derateknoloji.com">www.derateknoloji.com</a>
+                        </p>
+                        <p class="bd-footer-link">
+                            <a>Istanbul / Turkey</a>
+                        </p>
+                        <p class="bd-footer-link">
+                            <a>TR: +90 212 980 06 37</a>
+                        </p>
+                    </div>
+                    <div class="column is-2" style="color: #bdf347;">
+                        <div class="bd-footer-link-title" >
+                        <h2>LANGUAGE</h2>
+                        </div>
+                        <p class="bd-footer-link">
+                            <a href="https://deraconnect.com/tr/">
+                                Türkçe TR
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div id="newsletter" class="bd-newsletter" style=" width: 100vw; background-color: rgba(255, 255, 255, 0.299);">
+                    <div class="container pt-4 pb-4" style="padding-left: 7vw; padding-right: 7vw; ">
+                        <label class="label has-text-white"  >Subscribe to our newsletter.</label>
+                        <nav class="level mb-0">
+                            <div class="level-item level-left ">
+                                <p class="control mr-3">
+                                <input class="input is-rounded" type="text" placeholder="First Name">
+                                </p>
+                                <p class="control mr-3">
+                                    <input class="input is-rounded is-gre" type="email" placeholder="Work Email">
+                                <p class="control">
+                                <a href="mailto:connect@derateknoloji.com" class="button is-primary is-rounded">
+                                    Subscribe
+                                </a>
+                                </p>
+                            </div>
+                            <div class="level-item level-left "></div>
+                            <div class="level-item level-left">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48">
+                                            <a href="https://www.linkedin.com/company/dera-technology-design">
+                                                <img src="images/icons/linkedinwhite.svg" alt="Linkedin">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="media-left">
+                                        <figure class="image is-48x48">
+                                            <a href="https://www.instagram.com/derateknoloji/">
+                                                <img src="images/icons/instagramwhite.svg" alt="Instagram">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                        <label class="label has-text-white ">I accept the Privacy Policy</label>
+                    </div>
+                </div>
+                <div class="columns is-mobile is-multiline bd-footer-links pt-1" style="width: 100vw; padding-left: 6vw; padding-right: 9vw;">
+                    <div class="column is-1-desktop is-invisible-mobile">
+                    </div>
+                    <div class="column is-7-desktop is-12-mobile has-text-left has-text-white">
+                        <p class="bd-footer-link has-text-left">
+                            <h2>
+                                deraconnect © 2022 |  All Rights Reserved
+                            </h2>
+                        </p>
+                    </div>
+                    <div class="column is-1-desktop is-3-mobile pr-0 has-text-right-desktop has-text-left-mobile mb-2" >
+                        <label class="has-text-white ">Web3 by</label>
+                    </div>
+                    <div class="column is-2-desktop is-6-mobile has-text-left">
+                        <a href="https://diode.io/"><img src="images/diodeLogo/web3-by-diode-black.png" style="max-height: 5vh;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
 
     <!-- full height footer section with links and powered by diode logo -->
-    <section id="footer" style="scroll-snap-align: center;" class="hero is-medium is-default is-fullheight is-bold">
+    <!-- <section id="footer" style="scroll-snap-align: center;" class="hero is-medium is-default is-fullheight is-bold">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <div class="columns is-vcentered is-multiline is-mobile">
@@ -812,7 +977,7 @@ Gerçek sıfır-sızıntı sistemler kurabilirsiniz. Uygulamanıza erişimi akı
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 </div>
     
     <!-- Script to shrink header on scroll -->
