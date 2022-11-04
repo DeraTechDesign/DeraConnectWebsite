@@ -274,29 +274,28 @@
         <div class="hero-body">
             <div class="container has-text-centered" style="max-width:90%;" >
                 <div class="columns is-marginless">
-                    <div class="column is-4-desktop is-hidden-mobile"></div>
-                    <div class="column is-4-desktop is-12-mobile">
-                        <h4 style="font-family: 'Montserrat';" class="title isActive has-text-centered is-4">
+                    <div class="column is-12">
+                        <h4 style="font-family: 'Montserrat';" class="title has-text-left is-4">
                             <!-- için DeraConnect ne katkı sağlar?  -->
-                            What does DeraConnect offer for
+                            Dera Connect Solution for
                         </h4>
                     </div>
-                    
-                    <div class="column is-4-desktop is-hidden-mobile"></div>
                 </div>
-                <div class="tabs is-centered">
-                    <ul style="max-width: 90vw;" >
-                        <li class="is-hidden-desktop" style="min-width: 40vw;" > </li>
-                        <li class="tab is-active title isActive" onclick="openTab(event,'Everyone')" style="font-family: 'Montserrat';"><a>Everyone</a></li>
+                <div class="tabs is-large">
+                    <ul  style="margin-bottom: 1.5rem; justify-content: space-between; ">
+                        <li class="tab is-active" onclick="openTab(event,'Everyone')" style="font-family: 'Montserrat';"><a>Everyone</a></li>
                         <li class="tab" onclick="openTab(event,'Factories')" style="font-family: 'Montserrat';"><a>Factories</a></li>
                         <li class="tab" onclick="openTab(event,'Startups')" style="font-family: 'Montserrat';"><a>Startups</a></li>
                         <li class="tab" onclick="openTab(event,'SupplyChains')" style="font-family: 'Montserrat';"><a>Supply Chains</a></li>
                     </ul>
-                </div>
+                  </div>
                 <div class="columns">
-                    <div class="column is-3-desktop is-hidden-mobile"></div>
-                    <div class="column is-6-desktop is-12-mobile">
-                        <div id="Everyone" class="content-tab" >
+                    <div class="column is-12">
+                        <div id="Everyone" class="content-tab columns is-multiline is-mobile"  style="display: flex;">
+                        <div class="column is-4-desktop is-12-mobile">
+                            <img id="forImg" src="images/forPage/1.gif" style="height:35vh;" alt="Description">
+                        </div>
+                        <div class="column is-8-desktop is-12-mobile" style="align-self: flex-end;" >
                             <h5 style="font-family: 'Montserrat'; font-weight: 300; " class="title desc has-text-left is-5">
                                 <!-- Dera Connect ile cihazlarınızı, uygulamalarınızı ve işletmelerinizi uzaktan erişilebilir hale getirebilirsiniz. Sunucu kullanmanıza gerek kalmadan her tür uygulamanızı internet üzerinden erişebilir kılabilirsiniz. Bunun için herhangi bi IT masrafı veya güvenlik duvarına ihtiyaç yoktur. Blockchainin gücü ile ip adresi kullanmanıza veya port açmanıza gerek kalmaz.
 Gerçek sıfır-sızıntı sistemler kurabilirsiniz. Uygulamanıza erişimi akıllı kurallarla kontrol edebilirsiniz. Bu kuralların dışında sisteminize gelen hiçbir erişime yanıt vermeyen yazılımımızla, internete çıkan hiçbir noktanız olmadan her yerden erişilebilir olun. Üstelik her türlü yazılım ve sistemle ek geliştirme gerekmeden uyumludur. -->
@@ -306,26 +305,41 @@ Gerçek sıfır-sızıntı sistemler kurabilirsiniz. Uygulamanıza erişimi akı
                                 You can create real zero-leakage systems. You can control access to your application with smart rules. With our software that does not respond to any access to the system outside these rules, you can be accessed from anywhere without any point coming out to the internet. And it is compatible with any software and system without additional development.
                             </h5>
                         </div>
-                        <div id="Factories" class="content-tab"  style="display:none">
+                        </div>
+                        <div id="Factories" class="content-tab columns is-multiline is-mobile"  style="display: none;">
+                            <div class="column is-4-desktop is-12-mobile">
+                                <img id="forImg" src="images/forPage/2.svg" style="height:35vh;" alt="Description">
+                            </div>
+                            <div class="column is-8-desktop is-12-mobile" style="align-self: flex-end;" >
                             <h3 style="font-family: 'Montserrat'; font-weight: 300; " class="title desc has-text-left is-5">
                                 For factories and industrial companies, secure remote access to PLCs, SCADA, MES, ERP, and other systems is a must. DeraConnect provides a secure and easy-to-use solution for this. You can access your systems from anywhere in the world without opening ports or using IP addresses. 
                                 <br>
                                 <br>
                                 You can also create a secure remote access solution for your customers.
                             </h3>
+                            </div>
                         </div>
-                        <div id="Startups" class="content-tab"  style="display:none">
+                        <div id="Startups" class="content-tab columns is-multiline is-mobile"  style="display: none;">
+                            <div class="column is-4-desktop is-12-mobile">
+                                <img id="forImg" src="images/forPage/3.png" style="height:35vh;" alt="Description">
+                            </div>
+                            <div class="column is-8-desktop is-12-mobile" style="align-self: flex-end;" >
                             <h3 style="font-family: 'Montserrat'; font-weight: 300; " class="title desc has-text-left is-5">
                                 For Startups and small sized companies, maintaining cloud servers and security is a big challenge. DeraConnect provides a secure and easy-to-use solution for this. You don't need an IT team or costly cloud servers. With easy-to-use rules, you can create a secure remote app in minutes. You can access your apps from anywhere in the world without opening ports or using IP addresses.
                             </h3>
+                            </div>
                         </div>
-                        <div id="SupplyChains" class="content-tab"  style="display:none">
+                        <div id="SupplyChains" class="content-tab columns is-multiline is-mobile"  style="display: none;">
+                            <div class="column is-4-desktop is-12-mobile">
+                                <img id="forImg" src="images/forPage/4.svg" style="height:35vh;" alt="Description">
+                            </div>
+                            <div class="column is-8-desktop is-12-mobile" style="align-self: flex-end;" >
                             <h3 style="font-family: 'Montserrat'; font-weight: 300; " class="title desc has-text-left is-5">
                                 Connecting all the devices in the supply chain to a private network is a big challenge. DeraConnect provides a secure and easy-to-use solution for this. You can create a private network for your supply chain and connect all the devices to it as they are on your local network. You can access your devices from anywhere in the world without opening ports or using IP addresses.
                             </h3>
+                            </div>
                         </div>
                     </div>
-                    <div class="column is-3-desktop is-hidden-mobile"></div>
                 </div>
             </div>
         </div>
@@ -594,7 +608,7 @@ Gerçek sıfır-sızıntı sistemler kurabilirsiniz. Uygulamanıza erişimi akı
         </div>
     </section>
     <!-- Contact information page -->
-    <section id="contact" style="scroll-snap-align: start;" class="hero is-medium is-default is-fullheight is-bold">
+    <!-- <section id="contact" style="scroll-snap-align: start;" class="hero is-medium is-default is-fullheight is-bold">
         <div class="hero-body">
             <div class="container is-full has-text-centered" style="max-width:90%;">
                 <div class="columns is-vcentered is-multiline is-mobile">
@@ -689,6 +703,32 @@ Gerçek sıfır-sızıntı sistemler kurabilirsiniz. Uygulamanıza erişimi akı
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- 80vh height section with a bgimage -->
+    <section id="contact" style="scroll-snap-align: center; min-height: 60vh; background-size: 65vW; background-position: right -5vw bottom -50vh;background-repeat:no-repeat; background-image:url('images/pages/contact.svg');" class="hero is-medium is-default is-bold">
+        <div class="hero-body">
+            <div class="container is-full has-text-centered">
+                <div class="columns is-vcentered is-multiline is-mobile">
+                    <div class="column is-1-desktop is-0-mobile"> </div>
+                    <div class="column is-7-desktop is-12-mobile">
+                        <h3 style="font-family: 'Montserrat';" class="subtitle has-text-left is-3" sty>
+                            READY TO GET STARTED?
+                        </h2>
+                        <h4 style="font-family: 'Montserrat';" class="subtitle has-text-left is-6">
+                            Schedule a free strategy visit to start <br> transforming your business.
+                        </h4>
+                        <br>
+                        <p class="has-text-left">
+                            <a style="font-family: 'Montserrat'; " class="button is-primary is-outlined is-medium " href="mailto:connect@derateknoloji.com">
+                                <span>Book A Call</span>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="column is-invisible-desktop is-2-mobile"> </div>
                 </div>
             </div>
         </div>
@@ -880,10 +920,10 @@ $navbarBurgers.forEach( el => {
             }
             tablinks = document.getElementsByClassName("tab");
             for (i = 0; i < x.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" is-active title isActive", "");
+                tablinks[i].className = tablinks[i].className.replace(" is-active", "");
             }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " is-active title isActive";
+            document.getElementById(tabName).style.display = "flex";
+            evt.currentTarget.className += " is-active";
         }
     </script>
 </body>
